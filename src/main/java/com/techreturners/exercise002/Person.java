@@ -3,18 +3,18 @@ package com.techreturners.exercise002;
 public class Person {
     private final String firstName;
     private final String lastName;
-    private final String teamName;
+    private final String city;
     private final int age;
 
-    public Person(String firstName, String lastName, String teamName, int age) {
+    public Person(String firstName, String lastName, String city, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.teamName = teamName;
+        this.city = city;
         this.age = age;
     }
 
     public String getTeamName() {
-        return teamName;
+        return city;
     }
 
     public int getAge() {
