@@ -1,8 +1,10 @@
 package com.techreturners.exercise001;
 
 import org.junit.jupiter.api.Test;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -67,4 +69,5 @@ public class Exercise001Test {
         users.add(u4);
         assertEquals(2, ex001.countLinuxUsers(users));
     }
+
 }
