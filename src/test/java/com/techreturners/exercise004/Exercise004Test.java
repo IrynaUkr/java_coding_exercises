@@ -1,10 +1,11 @@
 package com.techreturners.exercise004;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Month;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Exercise004Test {
@@ -18,7 +19,6 @@ public class Exercise004Test {
         assertEquals(expected, ex004.getDateTime());
     }
 
-    @Disabled("You can remove this @Disabled annotation to run the test")
     @Test
     public void checkGetDateTimeWhenBothDateAndTimeIsSpecified() {
 
@@ -28,7 +28,6 @@ public class Exercise004Test {
         assertEquals(expected, ex004.getDateTime());
     }
 
-    @Disabled("You can remove this @Disabled annotation to run the test")
     @Test
     public void checkGetDateTimeWhenBothDateAndTimeIsSpecifiedWithDayRollOver() {
 
@@ -38,4 +37,12 @@ public class Exercise004Test {
         assertEquals(expected, ex004.getDateTime());
     }
 
+    @Test
+    public void checkGetDateSpecified() {
+
+        Exercise004 ex004 = new Exercise004(LocalDate.of(2021, Month.JANUARY, 24));
+        LocalDateTime expected = LocalDateTime.of(2052, Month.OCTOBER, 02, 1, 46, 40);
+
+        assertEquals(expected, ex004.getDateTime());
+    }
 }
