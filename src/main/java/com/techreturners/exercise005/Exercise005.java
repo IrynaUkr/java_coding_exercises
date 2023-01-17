@@ -5,11 +5,14 @@ import java.util.Set;
 
 public class Exercise005 {
 
+    public static final int ALPHABET_LETTER_COUNT  = 26;
+    public static final int ASCII_SYMBOLS_AMOUNT = 128;
+
     public boolean isPangram(String input) {
         if (input == null) {
             throw new IllegalArgumentException("Input is null");
         }
-        if (!input.codePoints().allMatch(c -> c < 128)) {
+        if (!input.codePoints().allMatch(c -> c < ASCII_SYMBOLS_AMOUNT)) {
             throw new IllegalArgumentException("Input contains non ASCII symbol");
         }
         Set<Character> set = new HashSet<>();
@@ -20,7 +23,7 @@ public class Exercise005 {
                 set.add(currentChar);
             }
         }
-        return set.size() == 26;
+        return set.size() == ALPHABET_LETTER_COUNT ;
     }
 
 }
